@@ -185,7 +185,7 @@ else
                        src/dotprod/src/dotprod_rrrf.o \
                        src/dotprod/src/sumsq.o"
         ARCH_OPTION="-ffast-math";;
-    armv7*|armv8*)
+    armv7*|armv8*|aarch64)
         # assume neon instructions are available
         # TODO: check for Neon availability
 
@@ -195,8 +195,8 @@ else
                        src/dotprod/src/dotprod_rrrf.neon.o \
                        src/dotprod/src/sumsq.o"
         # TODO: check these flags
-        #ARCH_OPTION="-ffast-math -mcpu=cortex-a8 -mfloat-abi=softfp -mfpu=neon";;
-        ARCH_OPTION="-ffast-math -mcpu=cortex-a7 -mfloat-abi=hard -mfpu=neon-vfpv4";;
+        ARCH_OPTION="-march=armv8-a";;
+        # ARCH_OPTION="-ffast-math -mcpu=cortex-a7 -mfloat-abi=hard -mfpu=neon-vfpv4";;
     *)
         # unknown architecture : use portable C version
         MLIBS_DOTPROD="src/dotprod/src/dotprod_cccf.o \
