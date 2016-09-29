@@ -1,0 +1,6 @@
+function	exec size (bytes)
+
+dotProd		8440
+sumVec		7800
+conv		9208
+autocorr	8960
