@@ -17,7 +17,7 @@
 		-test7 = sum all elements in a vector unrolled
 		-test8 = sum all elements in a vector 
 		-test9 = autocorrelation unrolled
-		Only tesst3 requires two sizes to be defined, SIZE1 for input and SIZE2 for the mask. Vectors are filled with randoms numbers.
+		Only test3 requires two sizes to be defined, SIZE1 for input and SIZE2 for the mask. Vectors are filled with random numbers.
 	example:
 		gcc -I. -O2 -g -w main.c DSPlib.c -DSIZE1=12000 -DTEST7 -o test7
 */
